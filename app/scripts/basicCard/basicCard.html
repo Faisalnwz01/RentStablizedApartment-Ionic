@@ -1,0 +1,17 @@
+<div class="item item-text-wrap md-whiteframe-2dp" layout="row" style="padding: 10px 10px 10px 20px;margin-bottom: 1%;margin-top: 2%;">
+    <div flex="75" layout="column" style="">
+        <div layout="row">
+            <!-- <img src="images/CityGradeIcon.png" style="height: 3em;width:3em;"> -->
+            <div style="margin-right: 10px;">
+                <h4 >Address: <span class="cardSpan">{{apt.address}}</span> </h4>
+                <h4 style="color:#7D7373;">Number of stablized units: <span class="cardSpan">{{apt.unitsstab2014}}</span></h4>
+                <h4 style="color:#7D7373;">Total Number of units: <span class="cardSpan">{{apt.unitstotal}}</span></h4>
+            </div>
+        </div>
+        <h4 style="color:#7D7373;">Zipcode: <span class="cardSpan">{{apt.zipcode}}</span></h4>
+        <h4 style="color:#7D7373;">Year Built: <span class="cardSpan">{{apt.yearbuilt}}</span></h4>
+    </div>
+    <div flex >
+        <img style="float:right;width: 5em;" ng-src="//maps.googleapis.com/maps/api/streetview?size=100x100&location={{apt.lat}},{{apt.lon}}&pitch=-0.76&key=AIzaSyBn-ZMKZmQh-FuxUIRzuJyiwlogyrST32Q">
+    </div>
+</div>

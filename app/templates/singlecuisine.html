@@ -1,0 +1,22 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="bar-assertive">
+        <div class="buttons">
+            <button class="button" on-tap="shareThisRes()">Share</button>
+        </div>
+        <h1 class="title">{{selectedAppt.address}}</h1>
+        <div class="buttons">
+            <button class="button" on-tap="closeSingleApartment()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <md-content layout="column">
+            <div flex="20" layout="row" class="my-container">
+                <map  style="width:100%; height: 135px" init-event="init-map" center="[{{selectedAppt.lat}}, {{selectedAppt.lon}}]" zoom="11">
+                    <street-view-panorama click-to-go="false" disable-default-u-i="true" disable-double-click-zoom="trueu" position="{{selectedAppt.lat}}, {{selectedAppt.lon}}" pov="{heading:270, pitch: -10}" scrollwheel="false" enable-close-button="false" visible="true">
+                    </street-view-panorama>
+                </map>
+            </div>
+        </md-content>
+       
+    </ion-content>
+</ion-modal-view>
