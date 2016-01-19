@@ -12,12 +12,6 @@
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content class="padding">
-    <!--     <ng-map zoom="20" ng-if="selectedAppt" center="selectedAppt.lat, selectedAppt.lon">
-            <marker position="{{selectedAppt.lat}}, {{selectedAppt.lon}}"></marker>
-            <street-view-panorama click-to-go="false" disable-default-u-i="false" disable-double-click-zoom="false" position="selectedAppt.lat, selectedAppt.lon" pov="{heading: heading, pitch: pitch}" scrollwheel="false" enable-close-button="true" visible="true">
-            </street-view-panorama>
-        </ng-map> -->
-
         <div ng-repeat="apt in appartments">
         <basic-card ng-click="showAptDialog(apt)" ng-if="apt.unitsstab2014 !== 0"></basic-card>
         </div>

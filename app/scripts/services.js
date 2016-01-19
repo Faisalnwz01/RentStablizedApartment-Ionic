@@ -28,15 +28,10 @@ angular.module('starter.services', [])
                 return data.data.results;
             })
         },
-        zillow: function() {
-            var par = JSON.stringify({
-                address: "766 east 9 street",
-                city: '',
-                state: 'NY',
-                zip: '11230'
-            })
+        zillow: function(par) {
+          
             return $http.get('https://whispering-bastion-1938.herokuapp.com/api/zillows?param=' + par).then(function(data) {
-                console.log(data.data)
+                return data.data
             })
         }
     };

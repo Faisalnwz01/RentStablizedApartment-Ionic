@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
             console.log(data)
         });
     });
-    Appartments.zillow()
+
 
     //show dialog for the single restranuant
     $scope.showAptDialog = function(apt) {
@@ -36,6 +36,18 @@ angular.module('starter.controllers', [])
             $scope.singleApartment = modal;
             $scope.singleApartment.show();
         });
+        var par = JSON.stringify({
+            address: {
+                address: apt.address,
+                city: '',
+                state: 'NY',
+                zip: apt.zipcode
+            },
+            apiName: 'GetDeepSearchResults'})
+        Appartments.zillow(par).then(function(data) {
+            console.log(data)
+            $scope.zillowData = data;
+        })
     };
 
     $scope.closeSingleApartment = function() {
